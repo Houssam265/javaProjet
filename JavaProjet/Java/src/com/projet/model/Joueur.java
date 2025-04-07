@@ -18,6 +18,12 @@ public class Joueur {
         this.nom = nom;
         this.sprite = new    ImageChargement("/images/player_avion.png");
     }
+
+    public Joueur(int i, int i1) {
+        X = i;
+        Y = i1;
+    }
+
     public void tirer() {
         Projectile p = new Projectile(X, Y);
     }

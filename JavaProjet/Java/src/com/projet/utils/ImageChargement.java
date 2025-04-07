@@ -16,8 +16,6 @@ public class ImageChargement {
             this.image = new Image(is);
         } catch (IOException e) {
             throw new RuntimeException("Erreur de chargement: " + chemin, e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 
@@ -26,6 +24,7 @@ public class ImageChargement {
     }
 
     public static Image ObtenirImage(String chemin) {
+
         return new ImageChargement(chemin).getImage();
     }
 }
